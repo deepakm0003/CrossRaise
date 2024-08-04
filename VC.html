@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VC - CrossRaise</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: url('https://i.ibb.co/5nSpsyy/b2.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 20px 0;
+            border-bottom: #77aaff 3px solid;
+            position: relative;
+        }
+
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+
+        header ul {
+            padding: 0;
+            list-style: none;
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+        }
+
+        header li {
+            display: inline;
+            padding: 0 20px;
+        }
+
+        .logo {
+            float: left;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .info-section {
+            padding: 20px 0;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        h1 {
+            color: #ffb700;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .blog-item {
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .blog-item img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .blog-item:hover {
+            transform: scale(1.05);
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .page-num {
+            margin: 0 5px;
+            padding: 10px 20px;
+            background: #333;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .page-num:hover {
+            background: #555;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px 0;
+            color: #fff;
+            border-top: #77aaff 3px solid;
+            margin-top: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .footer-section {
+            flex: 1;
+            padding: 10px;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-section ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="https://i.ibb.co/4VXHQx9/logo.jpg" alt="CrossRaise Logo" class="logo">
+            <div class="logo-text">
+                <h2>CrossRaise</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">Services</a></li>
+                    <li><a href="partner.html">Partners</a></li>
+                    <li><a href="index.html">Resources</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="VC Deal Flow" class="info-section">
+        <div class="container">
+            <h1>VC DEAL FLOW</h1>
+            <p>In the context of crowdfunding, VC deal flow refers to the process through which venture capital (VC) investors identify and evaluate potential investment opportunities presented on crowdfunding platforms. These platforms serve as avenues for early-stage startups and innovative projects to attract funding from a diverse pool of investors, including individual backers and institutional VC firms. VC deal flow in crowdfunding encompasses the sourcing, screening, and selection of promising ventures based on factors such as market potential, team expertise, scalability, and alignment with investor interests and objectives. Crowdfunding platforms like CrossRaise facilitate this process by providing visibility, due diligence tools, and access to a broad network of investors, thereby democratizing access to capital for startups and fostering innovation within the entrepreneurial ecosystem.</p>
+            <p>The all information are updated as the time period.</p>
+            <div class="blog-grid">
+                <div class="blog-item">
+                    <img src="https://i.ibb.co/sVW4McX/v5.jpg" alt="Blog Image 1">
+                    <h3>Crowdfunding platforms broaden the reach of startups by connecting them with a diverse pool of investors, including individual backers and institutional VC firms, who may not traditionally have access to early-stage investment opportunities.</h3>
+                </div>
+                <div class="blog-item">
+                    <img src="https://i.ibb.co/9n5GfsV/s3.jpg" alt="Blog Image 2">
+                    <h3> Startups gain visibility and exposure to potential investors through crowdfunding platforms, increasing their chances of attracting funding and expanding their network within the investment community.</h3>
+                </div>
+                <div class="blog-item">
+                    <img src="https://i.ibb.co/yN0qFjM/v3.jpg" alt="Blog Image 3">
+                    <h3>Crowdfunding democratizes access to capital by allowing startups to bypass traditional gatekeepers and pitch directly to a wide range of investors. This promotes inclusivity and diversity in the startup ecosystem.</h3>
+                </div>
+                <div class="blog-item">
+                    <img src="https://i.ibb.co/GJnSNsf/v4.jpg"  alt="Blog Image 4">
+                    <h3>Successful crowdfunding campaigns can serve as a form of market validation for startups, demonstrating investor interest and support for their business idea or product.</h3>
+                </div>
+                <div class="blog-item">
+                    <img src="https://i.ibb.co/tp0dKHn/v2.jpg"  alt="Blog Image 5">
+                    <h3>Crowdfunding platforms facilitate compliance with regulatory requirements, ensuring that fundraising activities adhere to securities laws, investor protections, and disclosure obligations.</h3>
+                </div>
+                <div class="blog-item">
+                    <img src="https://i.ibb.co/yQwFK1G/v1.jpg" alt="Blog Image 6">
+                    <h3>By facilitating VC deal flow, crowdfunding contributes to fostering innovation and entrepreneurship, supporting the development of disruptive technologies and solutions that address market needs and challenges.</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 CrossRaise. All rights reserved.</p>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="index.html">Services</a></li>
+                        <li><a href="partner.html">Partners</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="terms.html">Terms & Condition</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/company/cross-raise">LinkedIn</a></li>
+                        <li><a href="https://t.me/+k6xfgJQEpAg1MDQ9"> Telegram </a></li>
+                        <li><a href="https://chat.whatsapp.com/CfyHP6Y37Jj56iCdIHKxcz">WhatsApp Community</a></li>
+                        <p>Contact No. - 8000468060 </p>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNDRAISER Forms - CrossRaise</title>
+    <style>body {
+  color: #fff;
+  background: url("https://i.ibb.co/wCrWgDz/13e6aacf-84d9-4dc9-9884-52dc6588ff45.jpg") center / cover no-repeat fixed;
+  margin: 0;
+  padding: 0;
+  font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+header, footer {
+  background-color: #a5e8fc0f;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  display: flex;
+}
+
+header .logo {
+  align-items: center;
+  display: flex;
+}
+
+header .logo img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+header .logo span {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+header nav ul {
+  gap: 1em;
+  list-style: none;
+  display: flex;
+}
+
+header nav ul li {
+  position: relative;
+}
+
+header nav ul li a {
+  color: #fff;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+}
+
+header nav ul li a:hover, header nav ul li a:focus {
+  background-color: #444;
+  border-radius: 5px;
+}
+
+.dropdown-content {
+  z-index: 1;
+  background-color: #333;
+  min-width: 160px;
+  display: none;
+  position: absolute;
+  box-shadow: 0 8px 16px #0003;
+}
+
+.dropdown-content a {
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #575757;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.crypto-eth {
+  text-align: center;
+  padding: 2em 1em;
+}
+
+.crypto-eth h2 {
+  margin-bottom: .5em;
+  font-size: 2.5em;
+}
+
+.crypto-eth p {
+  margin-bottom: 2em;
+  font-size: 1.2em;
+}
+
+.metrics {
+  justify-content: center;
+  gap: 2em;
+  margin-bottom: 2em;
+  display: flex;
+}
+
+.metric {
+  background-color: #333;
+  border-radius: 10px;
+  padding: 1em;
+}
+
+.metric h3 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.metric h4 {
+  color: #aaa;
+  margin: 0;
+  font-size: 1em;
+}
+
+.crypto-image-block {
+  margin-bottom: 2em;
+}
+
+.crypto-image-block img {
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+}
+
+.crypto-form {
+  text-align: left;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 1em;
+}
+
+.form-group label {
+  margin-bottom: .5em;
+  display: block;
+}
+
+.form-group input, .form-group textarea {
+  color: #fff;
+  background-color: #222;
+  border: 1px solid #444;
+  border-radius: 5px;
+  width: 100%;
+  padding: .5em;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.crypto-form button {
+  color: #fff;
+  cursor: pointer;
+  background-color: #000000d5;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  padding: 1em;
+  font-size: 1em;
+  display: block;
+}
+
+.crypto-form button:hover {
+  background-color: #1395d59f;
+}
+
+.crypto-eth h2 {
+  color: #ffffffa6;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+header {
+  color: #fff;
+  background: #000c;
+  border-bottom: 3px solid #7af;
+  padding: 20px 0;
+  position: relative;
+}
+
+header a {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+header ul {
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+header li {
+  padding: 0 20px;
+  display: inline;
+}
+
+.logo {
+  float: left;
+  object-fit: cover;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
+
+.info-section {
+  background: #000000b3;
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 20px 0;
+}
+
+h1 {
+  color: #ffb700;
+}
+
+.blog-grid {
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  display: grid;
+}
+
+.blog-item {
+  text-align: center;
+  background: #000c;
+  border-radius: 10px;
+  padding: 10px;
+  transition: transform .2s ease-in-out;
+}
+
+.blog-item img {
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+.blog-item:hover {
+  transform: scale(1.05);
+}
+
+.pagination {
+  justify-content: center;
+  margin-top: 20px;
+  display: flex;
+}
+
+.page-num {
+  cursor: pointer;
+  background: #333;
+  border-radius: 5px;
+  margin: 0 5px;
+  padding: 10px 20px;
+}
+
+.page-num:hover {
+  background: #555;
+}
+
+footer {
+  color: #fff;
+  background: #000c;
+  border-top: 3px solid #7af;
+  margin-top: 20px;
+  padding: 20px 0;
+}
+
+.footer-links {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  display: flex;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 10px;
+}
+
+.footer-section h4 {
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  padding: 0;
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.block-line {
+  background-color: #ffffff1a;
+  border-radius: 10px;
+  margin-bottom: 1em;
+  padding: 1em;
+}
+
+.block-line p {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.action-button {
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  background-color: #1395d59f;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: .5em;
+  padding: 1em;
+  font-size: 1em;
+  display: block;
+}
+
+.action-button:hover {
+  background-color: #0b6881;
+}
+
+.qr-section {
+  justify-content: space-between;
+  margin-top: 20px;
+  display: flex;
+}
+
+.qr-block {
+  text-align: center;
+  flex: 1;
+  margin: 0 10px;
+}
+
+.qr-block img {
+  max-width: 100%;
+  height: auto;
+}
+
+.qr-section p {
+  color: #000e;
+  font-weight: bold;
+}
+
+.form-qr h2 {
+  color: #000e;
+  text-align: center;
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="https://i.ibb.co/4VXHQx9/logo.jpg" alt="CrossRaise Logo" class="logo">
+            <div class="logo-text">
+                <h2>CrossRaise</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/index.html">Services</a></li>
+                    <li><a href="/partner.html">Partners</a></li>
+                    <li><a href="/index.html">Resources</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <section class="crypto-eth">
+        <div class="container">
+            <div class="info-section">
+                <h2>Here are some forms that you fill to become an <br>FUNDRAISER With CrossRaise</h2>
+                <div class="block-line">
+                    <h3>REGISTRATION FORM</h3>
+                    <a href="https://forms.visme.co/formsPlayer/4d6dmork-fundraiser-registration-form" class="action-button">Sign In</a>    
+                    </div>
+                    <p>After your REGISTRATION There will be an the email come from CrossRaise with the 6 digit Unique Identification Number.<br>Remember that Number for future.</p>
+                <div class="block-line">
+                    <h3>KYC FORM</h3>
+                    <a href="https://forms.visme.co/formsPlayer/q6961pxe-kyc-form" class="action-button">KYC</a>       
+                </div>
+                <div class="block-line">
+                    <p>If you have any Inquiry regrading anything please fill this form <br> Our HR team will reach out in next 24 hours.</p>
+                    <h3>INQUIRY FORM</h3>
+                    <a href="https://forms.visme.co/formsPlayer/q6960rwq-inquiry-form" class="action-button">Inquiry</a>    
+                </div>
+                <div class="block-line">
+                    <p>Fill this form only when the meeting email come from the CrossRaise</p>
+                    <h3>MEETING SCHEDULING FORM</h3>
+                    <a href="https://forms.visme.co/formsPlayer/rx7xg17o-meeting-scheduling-form" class="action-button">Meet</a>              
+                </div>
+                <div class="block-line">
+                    <p>Please fill this form to known that where is mistake we have in our website</p>
+                    <h3>FEEDBACK FORM</h3>
+                    <a href="https://forms.visme.co/formsPlayer/q6961xgq-website-feedback-form" class="action-button">Feedback</a>                
+                </div>
+            </div>
+            <div class="form-qr"><h2>FORMS QR CODE</h2></div>
+            <div class="qr-section">
+                <div class="qr-block">
+                    <img src="c:\Users\Deepak Meena\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\TempState\8E54D6B523B279543AC12A0F7333CD3C\WhatsApp Image 2024-08-04 at 01.17.22_88ccac85.jpg" alt="QR Code 1">
+                    <p>REGISTRATION FORM</p>
+                </div>
+                <div class="qr-block">
+                    <img src="c:\Users\Deepak Meena\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\TempState\866D90E0921AC7B024B47D672445A086\WhatsApp Image 2024-08-04 at 00.49.33_9a270b8d.jpg" alt="QR Code 2">
+                    <p>KYC FORM</p>
+                </div>
+                <div class="qr-block">
+                    <img src="c:\Users\Deepak Meena\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\TempState\C4D2CE3F3EBB5393A77C33C0CD95DC93\WhatsApp Image 2024-08-04 at 00.48.03_619de8d2.jpg" alt="QR Code 3">
+                    <p>INQUIRY FORM</p>
+                </div>
+                <div class="qr-block">
+                    <img src="c:\Users\Deepak Meena\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\TempState\A6197A578FE7778E8D49A95AC425BCFC\WhatsApp Image 2024-08-04 at 00.47.21_08c2cac8.jpg" alt="QR Code 4">
+                    <p>MEETING SCHEDULING FORM</p>
+                </div>
+                <div class="qr-block">
+                    <img src="c:\Users\Deepak Meena\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\TempState\7171E95248FF768E1EBEE3EDDE01EA7A\WhatsApp Image 2024-08-04 at 00.46.04_3372cd54.jpg" alt="QR Code 5">
+                    <p>FEEDBACK FORM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 CrossRaise. All rights reserved.</p>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/about.html">About</a></li>
+                        <li><a href="/index.html">Services</a></li>
+                        <li><a href="/partner.html">Partners</a></li>
+                        <li><a href="/news.html">News</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/terms.html">Terms & Condition</a></li>
+                        <li><a href="/privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/company/cross-raise">LinkedIn</a></li>
+                        <li><a href="https://t.me/+k6xfgJQEpAg1MDQ9"> Telegram </a></li>
+                        <li><a href="https://chat.whatsapp.com/CfyHP6Y37Jj56iCdIHKxcz">WhatsApp Community</a></li>
+                        <p>Contact No. - 8000468060 </p>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+<script src="/fundraiser_form.61b62ebb.js"></script></body>
+</html>

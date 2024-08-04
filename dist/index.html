@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrossRaise</title>
+    <style>body {
+  color: #fff;
+  background-color: #000;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header, footer {
+  background-color: #a5e8fc0f;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  display: flex;
+}
+
+header .logo {
+  align-items: center;
+  display: flex;
+}
+
+header .logo img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+header .logo span {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+header nav ul {
+  gap: 1em;
+  list-style: none;
+  display: flex;
+}
+
+header nav ul li {
+  position: relative;
+}
+
+header nav ul li a {
+  padding: 10px 15px;
+  display: block;
+}
+
+header nav ul li a:hover, header nav ul li a:focus {
+  background-color: #444;
+  border-radius: 5px;
+}
+
+.top-contributors-section {
+  color: #fff;
+  background-image: url("https://i.ibb.co/7tbdh5Y/240-F-846163066-a3-Iml24-H2-Im-NO4gx5-ABoub8-Py-Ven-ONed.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 20px;
+}
+
+.top-startups-section {
+  color: #000;
+  background-image: url("https://i.ibb.co/Wz6N3Nt/240-F-848753375-KKs-VRMZf1-DZH9-T9r4-Ru-Ob2-Wy-Tazi-Uv-Q1.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 20px;
+}
+
+.get-in-touch-section {
+  color: #000;
+  background-image: url("https://i.ibb.co/0GMMmgW/240-F-849254195-x-Bxeqs2u-UEms-LE4-Sj-Lw-H5thfi7i0-W2b-P.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 20px;
+}
+
+.dropdown-content {
+  z-index: 1;
+  background-color: #333;
+  min-width: 160px;
+  display: none;
+  position: absolute;
+  box-shadow: 0 8px 16px #0003;
+}
+
+.dropdown-content a {
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #575757;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.hero {
+  background-position: center;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  display: flex;
+  position: relative;
+}
+
+.preparing-fundraise-section {
+  color: #fff;
+  background-image: url("https://i.ibb.co/cX8M15G/240-F-488610834-8r4qcxir-Cennv-WCd-Fi81-P4-U7q-P1b3jt-C.jpg");
+  background-size: cover;
+  margin-top: 0;
+  padding: 20px;
+}
+
+.preparing-content {
+  background-color: #00000080;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero-content h1 {
+  color: #ffffffd8;
+  margin-bottom: .5em;
+  font-size: 2.7em;
+}
+
+.cta-button {
+  color: #fff;
+  cursor: pointer;
+  background-color: #ff7300b2;
+  border: none;
+  border-radius: 5px;
+  padding: 1em 2em;
+  font-size: 1em;
+}
+
+section {
+  padding: 2em 5%;
+}
+
+.fundraising-status .status-cards, .services .service-cards {
+  gap: 2em;
+  display: flex;
+}
+
+.status-card, .service-card {
+  text-align: center;
+  cursor: pointer;
+  background-color: #222;
+  border-radius: 10px;
+  padding: 1em;
+  transition: transform .2s ease-in-out;
+}
+
+.status-card img, .service-card img {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.status-card:hover, .service-card:hover {
+  transform: scale(1.05);
+}
+
+#top-contributors h2 {
+  color: #000;
+}
+
+.success-metrics .metrics {
+  justify-content: space-around;
+  display: flex;
+}
+
+.metric h3 {
+  margin-bottom: .5em;
+  font-size: 2em;
+}
+
+footer {
+  text-align: center;
+  background-color: #000c;
+  padding: 1em 2em;
+}
+
+.footer-links {
+  justify-content: center;
+  gap: 2em;
+  margin-top: 1em;
+  display: flex;
+}
+
+#get-in-touch {
+  text-align: center;
+  padding: 20px;
+}
+
+#preparing-fundraise h2 {
+  text-align: center;
+  color: #000;
+}
+
+#top-contributors h2, #top-startups h2, .fundraising-status h2, .services h2 {
+  text-align: center;
+}
+
+.contact-button {
+  color: #fff;
+  background-color: #1cb4f0b2;
+  border: none;
+  border-radius: 5px;
+  align-items: center;
+  padding: 10px 15px;
+  text-decoration: none;
+  transition: background-color .3s;
+  display: inline-flex;
+}
+
+.contact-button:hover {
+  background-color: #0056b3;
+}
+
+body {
+  color: #f1f1f1;
+  background-color: #0d0d0d;
+  font-family: Arial, sans-serif;
+}
+
+.crypto-eth {
+  text-align: left;
+  background-color: #1a1a1a;
+  border-radius: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.crypto-eth h2 {
+  margin-bottom: 10px;
+  font-size: 36px;
+}
+
+.crypto-eth p {
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.crypto-eth .metrics {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+  display: grid;
+}
+
+.crypto-eth .metric {
+  text-align: center;
+  background-color: #262626;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.crypto-eth .metric h3 {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.crypto-eth .metric h4 {
+  color: #9a9a9a;
+  font-size: 14px;
+}
+
+.crypto-form {
+  background-color: #262626;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.crypto-form .form-group {
+  margin-bottom: 20px;
+}
+
+.crypto-form input, .crypto-form textarea {
+  color: #f1f1f1;
+  background-color: #1a1a1a;
+  border: none;
+  border-radius: 5px;
+  width: calc(100% - 20px);
+  margin: 5px 0;
+  padding: 10px;
+}
+
+.crypto-form button {
+  color: #fff;
+  cursor: pointer;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.crypto-form button:hover {
+  background-color: #0056b3;
+}
+
+.crypto-eth {
+  text-align: center;
+  box-shadow: 0 4px 8px #164cb9b8;
+}
+
+.crypto-image-block {
+  margin: 20px auto;
+  display: inline-block;
+}
+
+.crypto-image-block img {
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+}
+
+.safe {
+  text-align: center;
+  color: #000;
+  background-size: cover;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-weight: bold;
+  display: flex;
+}
+
+.safe h2 {
+  color: #fffefec5;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.safe-card {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+}
+
+.service-block {
+  text-align: left;
+  background-color: #fbf9f9ba;
+  border-radius: 8px;
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+  padding: 20px;
+  box-shadow: 0 4px 8px #1150a89d;
+}
+
+.service-block h3 {
+  color: #0073ffc7;
+  margin-top: 0;
+}
+
+.service-block p {
+  color: #000d;
+}
+
+#visitor-count {
+  text-align: center;
+  color: #ffffffa1;
+  background-color: #0000;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 1.2em;
+}
+
+.scroll-to-top {
+  color: #000;
+  cursor: pointer;
+  background-color: #ffffff8a;
+  border: none;
+  border-radius: 50%;
+  padding: 10px 20px;
+  font-size: 24px;
+  line-height: 1;
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+body {
+  color: #fff;
+  background-color: #000;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.cta-section {
+  text-align: center;
+  background: url("https://i.ibb.co/0GMMmgW/240-F-849254195-x-Bxeqs2u-UEms-LE4-Sj-Lw-H5thfi7i0-W2b-P.jpg") center / cover no-repeat;
+  padding: 50px 20px;
+  box-shadow: 0 4px 8px #1552a764;
+}
+
+.form-section {
+  text-align: center;
+  background-size: cover;
+  padding: 50px 20px;
+  box-shadow: 0 4px 8px #1552a764;
+}
+
+.cta-buttons {
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  display: flex;
+}
+
+.cta-button {
+  cursor: pointer;
+  border: 2px solid #0000;
+  border-radius: 10px;
+  padding: 15px 30px;
+  font-size: 18px;
+  transition: all .3s;
+}
+
+.form-buttons {
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  display: flex;
+}
+
+.form-button {
+  cursor: pointer;
+  border: 2px solid #0000;
+  border-radius: 10px;
+  padding: 15px 30px;
+  font-size: 18px;
+  transition: all .3s;
+}
+
+.yes-button {
+  color: #00f;
+  background-color: #000000b3;
+  border-color: #00f;
+}
+
+.no-button {
+  color: #f80;
+  background-color: #000000b3;
+  border-color: #f80;
+}
+
+.yes1-button {
+  color: #2b94b796;
+  background-color: #000000b3;
+  border-color: #920ae79b;
+}
+
+.form-section h2 {
+  color: #920ae79b;
+}
+
+.no1-button {
+  color: #2b94b796;
+  background-color: #000000b3;
+  border-color: #920ae79b;
+}
+
+.yes-button:hover {
+  color: #fff;
+  background-color: #00f;
+}
+
+.yes1-button:hover {
+  color: #fff;
+  background-color: #581d6a43;
+}
+
+.no-button:hover {
+  color: #fff;
+  background-color: #f80;
+}
+
+.no1-button:hover {
+  color: #fff;
+  background-color: #581d6a43;
+}
+
+.cta-note {
+  color: #ccc;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.crypto-transfer-section {
+  color: #ffffff87;
+  margin-top: 0;
+  padding: 20px;
+}
+
+.crypto-content {
+  background-color: #5b47964d;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.container {
+  text-align: center;
+}
+
+.crypto-button {
+  color: #fff;
+  cursor: pointer;
+  background-color: #000c;
+  border: #2e8b57;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 10px 20px;
+  transition: background-color .3s;
+  display: inline-block;
+}
+
+.black-crypto h2, .crypto-transfer-section h2 {
+  color: #fff;
+  text-align: center;
+  text-shadow: 2px 2px 4px #1672f4a1;
+}
+
+.crypto-transfer-section h3 {
+  color: #fff;
+  text-align: center;
+  text-shadow: 2px 2px 4px #3503e969;
+}
+
+.crypto-button:hover {
+  background-color: #200b32f7;
+}
+
+.crypto-image-block {
+  text-align: center;
+  margin: 20px auto;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.center-container {
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh;
+  display: flex;
+}
+
+.parent-container {
+  justify-content: center;
+  display: flex;
+}
+
+#crypto-transfer {
+  color: #fff;
+  background-image: url("https://i.ibb.co/M6T8Wqj/240-F-277846525-j9j-ROFQw9mq47-Rs466r8-F79-ZBrq-YLh9v.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+}
+</style>
+    <script>document.addEventListener("DOMContentLoaded", function() {
+    async function updateVisitorCount() {
+        if (localStorage.getItem("visitorCount")) {
+            let count = parseInt(localStorage.getItem("visitorCount"));
+            count++;
+            localStorage.setItem("visitorCount", count);
+        } else localStorage.setItem("visitorCount", 1);
+        document.getElementById("count").innerText = localStorage.getItem("visitorCount");
+    }
+    updateVisitorCount();
+    document.querySelector(".yes-button").addEventListener("click", ()=>{
+        alert("Connecting you with web3 investors(Partners)...");
+    });
+    document.querySelector(".no-button").addEventListener("click", ()=>{
+        alert("We are here to help you get pitch-perfect!");
+    });
+    const dropdown = document.querySelector(".dropdown");
+    const scrollToTopButton = document.querySelector(".scroll-to-top");
+    dropdown.addEventListener("mouseover", function() {
+        this.querySelector(".dropdown-content").style.display = "block";
+    });
+    dropdown.addEventListener("mouseout", function() {
+        this.querySelector(".dropdown-content").style.display = "none";
+    });
+    window.addEventListener("scroll", function() {
+        if (window.scrollY > 100) scrollToTopButton.style.display = "block";
+        else scrollToTopButton.style.display = "none";
+    });
+    scrollToTopButton.addEventListener("click", function() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+    const preparingSection = document.getElementById("preparing-fundraise");
+    const statusCard = document.querySelector(".status-card:nth-child(1)");
+    statusCard.addEventListener("click", function() {
+        preparingSection.scrollIntoView({
+            behavior: "smooth"
+        });
+    });
+    const topContributorsSection = document.getElementById("top-contributors");
+    const topContributorsCard = document.querySelector(".status-card:nth-child(2)");
+    topContributorsCard.addEventListener("click", function() {
+        topContributorsSection.scrollIntoView({
+            behavior: "smooth"
+        });
+    });
+    const topStartupsSection = document.getElementById("top-startups");
+    const topStartupsCard = document.querySelector(".status-card:nth-child(3)");
+    topStartupsCard.addEventListener("click", function() {
+        topStartupsSection.scrollIntoView({
+            behavior: "smooth"
+        });
+    });
+    const topContributorsLink = document.querySelector('a[href="#top-contributors"]');
+    topContributorsLink.addEventListener("click", function(event) {
+        event.preventDefault();
+        topContributorsSection.scrollIntoView({
+            behavior: "smooth"
+        });
+    });
+    const topStartupsLink = document.querySelector('a[href="#top-startups"]');
+    topStartupsLink.addEventListener("click", function(event) {
+        event.preventDefault();
+        topStartupsSection.scrollIntoView({
+            behavior: "smooth"
+        });
+    });
+});
+
+</script></head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://i.ibb.co/QHZ9hCT/logo.jpg" alt="CrossRaise Logo" class="circle-logo">
+            <span>CrossRaise</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Services &#x25BC;</a>
+                    <div class="dropdown-content">
+                        <a href="/Crowdfund_Consulting.html">CrowdFund Consulting</a>
+                        <a href="/VC.html">VC Deal Flow</a>
+                        <a href="/Marketing.html">Crowdfunding Marketing & Communications</a>
+                        <a href="/legal.html">Legal & Compliance</a>
+                        <a href="/investor.html">Investor Relations & Fundraising</a>
+                    </div>
+                </li>
+                <li><a href="/partner.html">Partners</a></li>
+                <li class="dropdown">
+                    <a href="/index.html">Resources &#x25BC;</a>
+                    <div class="dropdown-content">
+                        <a href="/news.html">News</a>
+                        <a href="/blog.html">Blog</a>
+                    </div>
+                </li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" style="background-image: url(&quot;https://i.ibb.co/MMm9FwH/240-F-606572560-vdm8-Uln-UEOlbxe-Ou-EQKUGk9-Usr-VGa0ao.jpg&quot;)">
+        <div class="hero-content">
+            <h1>We help Crypto Transaction, Projects & Blockchain startups to get <br> VC funding & grow</h1>
+            <a href="/about.html" class="cta-button">Learn More</a>
+        </div>
+    </section>
+
+    <section class="form-section">
+        <h1>What is your role in this website</h1>
+        <div class="form-buttons">
+            <a href="/investor_form.html" class="form-button yes1-button"><h2>INVESTOR</h2><br> Now give some time for your future</a>
+            <a href="/fundraiser_form.html" class="form-button no1-button"><h2>FUNDRAISER</h2><br> Now give some time for your future</a>
+        </div>
+        <h4 class="cta-note">In this there are several forms that make the connection between the you and CrossRaise Family        </h4>
+    </section>s
+
+    <section class="fundraising-status">
+        <h2>What's your Mind as for the Fundraising for Startups?</h2>
+        <div class="status-cards">
+            <div class="status-card">
+                <h3>Preparing to Fundraise</h3>
+                <img src="https://i.ibb.co/gDsBKQs/240-F-194262695-5nmzp-CKCYP2wfy-YIQjh-VLsi-Iyj6o-IVe-D.jpg" alt="Preparing Image">
+                <p>Get everything ready before you approach investors.</p>
+            </div>
+            <div class="status-card">
+                <h3>Top Contributors in the Blockchain</h3>
+                <img src="https://i.ibb.co/VHJT6Zn/240-F-863943058-rb-Vm-IDI4-WTTTLHCXe-Me-DTz-EDBr-WOOJWg.jpg" alt="Ready Image">
+                <p>The List of top crypto and blockchain contributers.</p>
+            </div>
+            <div class="status-card">
+                <h3>Top Startups with Blockchain </h3>
+                <img src="https://i.ibb.co/mbdcdM3/240-F-257957753-y9b-WBFh-MFev7ikz0-Q7cxge066-XOAk1-KZ.jpg" alt="Ready Image">
+                <p>You've got everything to be like this.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="services">
+        <h2>Our Services for Projects & Startups</h2>
+        <div class="service-cards">
+            <div class="service-card">
+                <h3>Investor Relations & Fundraising</h3>
+                <a href="/investor.html"><img src="https://i.ibb.co/8NPMs9R/240-F-623837746-CMCq-F8c-Es-Gqpq-Ap-CFd-EGBs-O7-USG65-Ocm.jpg" alt="Service 1"></a>
+                <p>Comprehensive support for connecting with investors and securing funding.</p>
+            </div>
+            <div class="service-card">
+                <h3>Legal & Compliance</h3>
+                <a href="/legal.html"><img src="https://i.ibb.co/12g7w29/240-F-708977830-mgz-QHU0-YZh-Dn-Iw-Vmsg-OEo7-Pn3-U0-VBTKU.jpg" alt="Service 2"></a>
+                <p>Find and recruit the best talent for your startup.</p>
+            </div>
+            <div class="service-card">
+                <h3>Marketing & Communications</h3>
+                <a href="/Marketing.html"><img src="https://i.ibb.co/rdv5bLY/240-F-711587895-Fyse-Hg-Q1tqy-PTrsn-WWq-I7-Ud-UMxe-X9-PBT.jpg" alt="Service 3"></a>
+                <p>Develop and execute effective marketing strategies.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h1>Got everything lined up and good to go?</h1>
+        <div class="cta-buttons">
+            <a href="/partner.html" class="cta-button yes-button">Yes, connect me with the startups</a>
+            <a href="/contact.html" class="cta-button no-button">Not yet, please help me get there!</a>
+        </div>
+        <h4 class="cta-note">
+            We give the top quality professional mentors for the talk and they give their 100% in the customers and friends of this website.
+        </h4>
+    </section>
+
+    <section class="black-crypto">
+        <h2>Cryptocurrency Transfer Process</h2>
+    </section>
+
+    <section id="crypto-transfer" class="crypto-transfer-section">
+        <h2>Transferring Funds via Cryptocurrency</h2>
+        <div class="crypto-content">
+            <p>Using cryptocurrency for fundraising is a secure and efficient method. Ensure all transactions are verified and documented.</p>
+            <h3>Seamless and Secure Transactions with MetaMask Integration</h3>
+            <ul>
+                <li>We Support Ethereum</li>
+                <li>Verify Transactions</li>
+                <li>Send message</li>
+            </ul>
+            <div class="center-container">
+                <div class="crypto-image-block">
+                    <img src="https://i.ibb.co/fQd5n0Z/240-F-573227544-g-Xw-Wy-FLBFYv-QQo4-Du1pl52-SQDRFJ2nau.jpg" alt="Crypto Image">
+                </div>
+            </div>
+            <div class="container">
+                <a href="/transfer.html" class="crypto-button">Go For It</a>
+            </div>
+        </div>
+    </section>
+        
+    
+    <section class="safe">
+        <h2>Services that we continue <br> to Improve</h2>
+        <div class="safe-card">
+            <div class="service-block">
+                <h3>Security Guarantee</h3>
+                <p>Security guaranteed. We always maintain the privacy, security and quality of CrossRaise.</p>
+            </div>
+            <div class="service-block">
+                <h3>Fastest Transaction</h3>
+                <p>We provide the fastest and safest transactions in the crypto world.</p>
+            </div>
+            <div class="service-block">
+                <h3>Best Exchange Rate</h3>
+                <p>From all exchange rates, CrossRaise offers the best rate for currency conversion.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="preparing-fundraise" class="preparing-fundraise-section">
+        <h2>Preparing to Fundraise</h2>
+        <div class="preparing-content">
+            <h3>Preparing to create files for fundraising</h3>
+            <p>Creating files for a fundraising campaign involves preparing a set of essential documents and materials that communicate your project's vision, goals, and roadmap to potential investors and backers.</p>
+            <h3>Key Steps</h3>
+            <p>In our experience, to ensure a successful fundraising strategy for your startup and projects, make sure you’ve got the following essentials locked and loaded::</p>
+            <ul>
+                <li>Smart Contract Development</li>
+                <li>Tokenomics and Token Creation</li>
+                <li>Leverage Partnerships and Advisors</li>
+                <li>Transparent Communication</li>
+                <li>Scalability and Future Planning</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="top-contributors" class="top-contributors-section">
+        <h2>Top Contributors</h2>
+        <div class="contributors-content">
+            <h3>The top supporters in the crypto community.</h3>
+            <p>These individuals have made significant contributions to the development and popularization of blockchain technology:</p>
+            <h3>Notable Contributors</h3>
+            <ul>
+                <li>
+                    <h4>Satoshi Nakamoto</h4>
+                    <p>Known as the creator of Bitcoin and the underlying blockchain technology, Satoshi Nakamoto's work has revolutionized the financial world and paved the way for decentralized currencies.</p>
+                </li>
+                <li>
+                    <h4>Vitalik Buterin</h4>
+                    <p>Co-founder of Ethereum, Vitalik Buterin has been instrumental in developing the Ethereum blockchain, which supports smart contracts and decentralized applications (dApps).</p>
+                </li>
+                <li>
+                    <h4>Charlie Lee</h4>
+                    <p>Creator of Litecoin, Charlie Lee designed this cryptocurrency to be the "silver to Bitcoin's gold," offering faster transaction times and a more scalable network.</p>
+                </li>
+                <li>
+                    <h4>Gavin Wood</h4>
+                    <p>Co-founder of Ethereum and creator of Polkadot, Gavin Wood has contributed significantly to the advancement of blockchain interoperability and scalability.</p>
+                </li>
+                <li>
+                    <h4>Andreas M. Antonopoulos</h4>
+                    <p>A prominent advocate for Bitcoin and open blockchain technologies, Andreas M. Antonopoulos is known for his educational books, talks, and efforts to spread awareness and understanding of cryptocurrency.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    
+    <section id="top-startups" class="top-startups-section">
+        <h2>Top Startups</h2>
+        <div class="startups-content">
+            <h3>Leading innovators in the blockchain ecosystem.</h3>
+            <p>These startups are making significant strides in the world of decentralized finance and crowdfunding:</p>
+            <h3>Notable Startups</h3>
+            <ul>
+                <li>
+                    <h4>DAO Maker</h4>
+                    <p>Specializes in tokenized crowdfunding solutions and DAO (Decentralized Autonomous Organization) creation, aiming to facilitate fundraising and community engagement through token sales.</p>
+                </li>
+                <li>
+                    <h4>Polkastarter</h4>
+                    <p>Operates as a decentralized fundraising platform built for cross-chain token pools and auctions, allowing projects to raise capital and achieve liquidity.</p>
+                </li>
+                <li>
+                    <h4>KickICO</h4>
+                    <p>Provides a platform for crowdfunding campaigns based on blockchain technology, enabling projects to raise funds through token sales.</p>
+                </li>
+                <li>
+                    <h4>TrustSwap</h4>
+                    <p>Offers a suite of decentralized finance (DeFi) solutions, including smart contract-based services for fundraising, escrow, and token swaps.</p>
+                </li>
+                <li>
+                    <h4>Molecule</h4>
+                    <p>Focuses on tokenizing intellectual property and scientific research through decentralized crowdfunding, enabling direct participation and investment in scientific discoveries.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+    
+    <section class="success-metrics">
+        <h2>Our success in numbers</h2>
+        <div class="metrics">
+            <div class="metric">
+                <h3>6000+</h3>
+                <p>Total Raised</p>
+            </div>
+            <div class="metric">
+                <h3>1</h3>
+                <p>Startups</p>
+            </div>
+            <div class="metric">
+                <h3>1</h3>
+                <p>Countries</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="visitor-count">
+        <p>Visitor Count: <span id="count">0</span></p>
+    </div>
+
+
+    <section id="get-in-touch" class="get-in-touch-section">
+        <h2>𝐃𝐨𝐧'𝐭 𝐇𝐞𝐬𝐢𝐭𝐚𝐭𝐞 𝐭𝐨 𝐫𝐞𝐚𝐜𝐡 𝐮𝐬:</h2>
+        <div style="text-align: center">
+            <p>Make connection with CrossRaise
+            </p>
+            <a href="/contact.html" class="contact-button">
+                <i class="fas fa-envelope" style="margin-right: 5px"></i> Get in touch
+            </a>
+        </div>
+    </section>
+    
+    <footer>
+        <p>© 2024 CrossRaise. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="/privacy.html">Privacy Policy</a>
+            <a href="/terms.html">Terms of Service</a>
+        </div>
+    </footer>
+    <p>CrossRaise</p>
+            <p>Founder :- Deepak Meena </p>
+            <p>Address: IIIT Delhi, Okhla phase III Near GovindPuri Metro Station, New Delhi, Delhi 110020</p>
+            <p>Email: crossraise2024@gmail.com</p>
+            <p>Phone: 8000468060</p>
+
+    <button class="scroll-to-top">&#11105;</button>
+<script src="/frontend.3464ddca.js"></script></body>
+</html>

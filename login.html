@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrossRaise Login & Sign-Up</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: url('https://i.ibb.co/KjRNyX1/240-F-585673857-PSBokp-Zeh-COo-F9-N6c8-Va-Bhu1-F3q-H45-KH.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            position: relative;
+        }
+        
+        .logo-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            text-align: center;
+        }
+        
+        .logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        
+        .company-name {
+            color: white;
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        .container {
+            display: flex;
+            width: 900px;
+            height: 700px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0);
+            border-radius: 10px;
+            overflow: hidden;
+            background-size: cover;
+        }
+
+        .welcome-section {
+            background: rgba(102, 126, 234, 0);
+            color: white;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .welcome-section h1 {
+            margin: 0;
+        }
+
+        .welcome-section p {
+            margin-top: 10px;
+        }
+
+        .form-section {
+            background: rgba(1, 1, 1, 0.333);
+            flex: 1;
+            padding: 40px 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        .form-section h2 {
+            margin-bottom: 20px;
+            color: #fffefe90;
+        }
+
+        .form-section input, .form-section select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-section button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #6131db5d;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .form-section button:hover {
+            background: #5927d8c5;
+        }
+
+        .social-login {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .social-login a {
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            width: 48%;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .social-login a.twitter {
+            background: #0c4568c9;
+        }
+
+        .social-login a.facebook {
+            background: #0c4568c9;
+        }
+
+        .toggle-link {
+            margin-top: 20px;
+            text-align: center;
+            color: #f0f0f2af;
+            cursor: pointer;
+        }
+
+        .show-password {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+            color: #fffefe90;
+        }
+
+        .show-password input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .password-container {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        
+        .password-container input[type="password"] {
+            width: calc(100% - 90px);
+        }
+        .password-container .toggle-password{
+            position: relative;
+        }        
+        .password-container .toggle-password {
+            position: password-container(center);
+            top: 50%;
+            right: 10px;
+            cursor: pointer;
+            color: hsla(0, 0%, 0%, 0.537);
+            font-size: 20px;
+        }
+
+        nav ul li a{
+            color: #ccc;
+            text-decoration: none;
+            padding: 10px;
+            transition: color 0.3s;
+            position: relative;
+            font-size: 16px;
+        }
+
+        nav ul li a:hover{
+            text-decoration: underline;
+        }
+
+        nav ul{
+            list-style: none;
+            position: absolute;
+            top: 0%;
+            right: 5%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="https://i.ibb.co/QHZ9hCT/logo.jpg" alt="CrossRaise Logo" class="logo">
+            <p class="company-name">CrossRaise</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="about.html">About us</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="welcome-section">
+                <h1>Unlock Your Potential <br> with us</h1>
+                <p>Access your account and Get Started</p>
+            </div>
+            <div class="form-section">
+                <div id="signInFormContainer">
+                    <h2>Sign In</h2>
+                    <form id="signInForm">
+                        <input type="email" id="signInEmail" placeholder="Email" required>
+                        <div class="password-container">
+                            <input type="password" id="signInPassword" placeholder="Password" required>
+                            <i class="fa fa-eye toggle-password" id="toggleSignInPassword"></i>
+                        </div>
+                        <button type="submit">Sign In</button>
+                    </form>
+                    <div class="social-login">
+                        <a href="https://www.linkedin.com/company/cross-raise#" class="twitter">Linkedin</a>
+                        <a href="https://t.me/+k6xfgJQEpAg1MDQ9" class="facebook">Telegram</a>
+                    </div>
+                    <p class="toggle-link" onclick="toggleForms()">Don't have an account? Sign Up</p>
+                </div>
+                <div id="signUpFormContainer" style="display:none;">
+                    <h2>Sign Up</h2>
+                    <form id="signUpForm">
+                        <input type="text" id="signUpName" placeholder="Name" required>
+                        <input type="email" id="signUpEmail" placeholder="Email" required>
+                        <input type="text" id="signUpMobile" placeholder="Mobile" required>
+                        <div class="password-container">
+                            <input type="password" id="signUpPassword" placeholder="Password" required>
+                            <i class="fa fa-eye toggle-password" id="toggleSignUpPassword"></i>
+                        </div>
+                        <select id="signUpRole" required>
+                            <option value="" disabled selected>Select your role</option>
+                            <option value="investor">Investor</option>
+                            <option value="fundraiser">Fundraiser</option>
+                        </select>
+                        <button type="submit">Sign Up</button>
+                    </form>
+                    <p class="toggle-link" onclick="toggleForms()">Already have an account? Sign In</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <script>
+        function toggleForms() {
+            const signInFormContainer = document.getElementById('signInFormContainer');
+            const signUpFormContainer = document.getElementById('signUpFormContainer');
+            if (signInFormContainer.style.display === 'none') {
+                signInFormContainer.style.display = 'block';
+                signUpFormContainer.style.display = 'none';
+            } else {
+                signInFormContainer.style.display = 'none';
+                signUpFormContainer.style.display = 'block';
+            }
+        }
+
+        function togglePasswordVisibility(iconId, passwordId) {
+            const icon = document.getElementById(iconId);
+            const passwordField = document.getElementById(passwordId);
+            icon.addEventListener('click', () => {
+                const type = passwordField.type === 'password' ? 'text' : 'password';
+                passwordField.type = type;
+                icon.className = type === 'password' ? 'fa fa-eye' : 'fa fa-eye-slash';
+            });
+        }
+        
+        togglePasswordVisibility('toggleSignInPassword', 'signInPassword');
+        togglePasswordVisibility('toggleSignUpPassword', 'signUpPassword');
+        document.getElementById('signInForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = document.getElementById('signInEmail').value;
+            const password = document.getElementById('signInPassword').value;
+
+            const response = await fetch('/signin', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email, password })
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                window.location.href = 'index.html'; 
+            } else {
+                alert(data.message);
+            }
+        });
+
+        document.getElementById('signUpForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const name = document.getElementById('signUpName').value;
+            const email = document.getElementById('signUpEmail').value;
+            const mobile = document.getElementById('signUpMobile').value;
+            const password = document.getElementById('signUpPassword').value;
+            const role = document.getElementById('signUpRole').value;
+
+            const response = await fetch('/signup', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name, email, mobile, password, role })
+            });
+
+            const data = await response.json();
+            alert(data.message);
+        });
+    </script>
+</body>

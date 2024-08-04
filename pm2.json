@@ -1,0 +1,26 @@
+{
+    "apps": [
+        {
+            "name": "index",
+            "script": "./index.js",
+            "instances": 1,
+            "exec_mode": "fork",
+            "env": {
+                "PORT": 3000,
+                "EMAIL_USER": "crossraise2024@gmail.com",
+                "EMAIL_PASS": "mufz qxer cwaf smlw"
+            }
+        },
+        {
+            "name": "pindex",
+            "script": "./pindex.js",
+            "instances": 1,
+            "exec_mode": "fork",
+            "env": {
+                "PINDEX_PORT": 3001,
+                "EMAIL_USER": "crossraise2024@gmail.com",
+                "EMAIL_PASS": "mufz qxer cwaf smlw"
+            }
+        }
+    ]
+}

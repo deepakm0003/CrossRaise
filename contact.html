@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - CrossRaise</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: url('https://i.ibb.co/SwLJgZh/240-F-865930704-d-BSe1-Og-OTxc-Ld-Ac-H2b-Jf0y-Le-Du-Otwv-QW.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+        }
+        header img {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .content {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .content h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .content form {
+            display: flex;
+            flex-direction: column;
+        }
+        .content form input, .content form textarea, .content form button {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+        .content form input, .content form textarea {
+            background: #333;
+            color: #fff;
+        }
+        .content form button {
+            background: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        .content form button:hover {
+            background: #0056b3;
+        }
+        .contact-info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .contact-info div {
+            width: 48%;
+        }
+        .contact-info h3 {
+            margin-bottom: 10px;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="https://i.ibb.co/4VXHQx9/logo.jpg" alt="CrossRaise Logo">
+            <h1>CrossRaise</h1>
+        </header>
+        <div class="content">
+            <h2>Let's Talk</h2>
+            <p>If you are a startup looking for funding... Then Give Your info for Contact. </p>
+            <form action="https://docs.google.com/forms/d/e/1FAIpQLSeQbLoyuSrewMv0bDH6CCItwr1-Kb9RwaRq1pbfYbpQT7CADA/viewform?usp=sf_link" method="get" target="_blank">
+                <input type="text" name="name" placeholder="Name *" required>
+                <input type="text" name="company" placeholder="Company/Project/Startup" required>
+                <input type="email" name="email" placeholder="Email *" required>
+                <input type="text" name="phone" placeholder="Contact No.">
+                <input type="text" name="linkedin" placeholder="LinkedIn">
+                <div>
+                    <label><input type="checkbox" name="type" value="Startup"> Startup</label>
+                    <label><input type="checkbox" name="type" value="Service Provider"> Service Provider</label>
+                    <label><input type="checkbox" name="type" value="General Inquiry"> General Inquiry</label>
+                    <label><input type="checkbox" name="type" value="Other"> Other</label>
+                </div>
+                <textarea name="message" placeholder="Message *" required></textarea>
+                <button type="submit">Send Message</button>
+                <h3>"At CrossRaise, Your information is secure. Fill out the Google form also; we’ll respond promptly"</h3>
+                <h2> CrossRaise -- CrossCheck </h2>
+            </form>
+            <div class="contact-info">
+            </div>
+        </div>
+        <div class="footer">
+        </div>
+    </div>
+</body>
+</html>
